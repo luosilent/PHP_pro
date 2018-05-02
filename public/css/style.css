@@ -1,0 +1,91 @@
+.wrapper {
+
+}
+
+p {
+    text-align:center;
+}
+
+
+.header {
+    /*height:200px;*/
+    /*display:flex;*/
+    /*flex-direction: column;*/
+    width: 100%;
+    /*height:200px;*/
+    /*font-size:4em;*/
+    background: #76a573;
+	
+	display:flex;/*Flex布局*/
+    display: -webkit-flex; /* Safari */
+    /*align-items:center;/*指定垂直居中*/
+	flex-direction: column;
+	
+}
+
+#favorite {
+	background-color: #FFFFFF;
+	margin-top:20px;
+	margin-left:30px;
+	
+} 
+
+.header h1 {
+    margin:auto;
+    text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align:middle;
+
+}
+
+.content {
+	width: 60%;
+	margin:auto;
+}
+
+.content form {
+	width: 100%;
+}
+
+.content h2 {
+	margin-top: 70px;
+	padding-bottom:50px;
+	margin-bottom: 50px;
+	border-bottom:2px solid #d4dde4;
+	height:38px;
+	line-height:38px;
+}
+
+
+.button a {
+    position: absolute;
+    top: 62px;
+    padding:2px;
+    background-color:#e07e4f;
+    color:white;
+}
+
+.button a:visited {
+    color:white;
+}
+
+form {
+    /*display:flex;*/
+    /*flex-direction: column;*/
+    margin:auto;
+    height:350px;
+    width:600px;
+}
+
+form input {
+    margin:auto;
+	margin-bottom:20px;
+    width:100%;
+    padding:10px;
+    display:block;
+}
+
+form button {
+    margin:auto;
+}
