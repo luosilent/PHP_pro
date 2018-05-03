@@ -1,5 +1,6 @@
 <?php
 include("../helper/database.php");
+error_reporting(0);
 session_start();
 if(! isset($_SESSION["user_id"])){
     $_SESSION["user_id"] = 0;
@@ -60,7 +61,7 @@ if(! isset($_SESSION["user_id"])){
                 <th>Url</th></tr>
 
             <?php
-            error_reporting(0);
+           
             if(!$_GET["word"] && !$_GET["word2"]){
                 $sql = "SELECT * FROM tbl_places order by 	place_id";
             }
