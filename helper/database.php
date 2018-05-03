@@ -23,9 +23,9 @@
 //    $db_name=$mysql->getElementsByTagName("database")->item(0)->nodeValue;
 
     $db_host = 'localhost';
-    $db_username = 'test';
-    $db_password = 'test1';
-    $db_name='test';
+    $db_username = 'root';
+    $db_password = 'root';
+    $db_name='fav';
 
     $conn = mysqli_connect($db_host, $db_username, $db_password, $db_name);
     mysqli_query($conn, "set names utf8");

@@ -1,5 +1,6 @@
 <?php
 include("../helper/database.php");
+error_reporting(0);
 session_start();
 if(! isset($_SESSION["user_id"])){
     $_SESSION["user_id"] = 0;
@@ -33,7 +34,7 @@ if(! isset($_SESSION["user_id"])){
 	<div >
 		<ul class="nav nav-pills">
 	  <li class="nav-item">
-		<a class="nav-link active" href="#">Favorite Place</a>
+		<a class="nav-link active" href="favplaces.php">Favorite Place</a>
 	  </li>
 	  <li class="nav-item Logout">
 		<a class="nav-link" href="#">Logout</a>
@@ -42,7 +43,7 @@ if(! isset($_SESSION["user_id"])){
 	  </ul>
 	</div>
 
-    <div style="align-self: flex-end;margin-right:250px;font-size:2rem;background-color: #A8A8A8; ">welcome <?php echo $_SESSION["name"];?></div>
+    <div style="align-self: flex-end;margin-right:180px; font-size:2rem;background-color: lightblue; ">welcome <?php echo $_SESSION["name"];?></div>
 </div>
 
 <div class="content" >
@@ -60,7 +61,7 @@ if(! isset($_SESSION["user_id"])){
                 <th>Url</th></tr>
 
             <?php
-            error_reporting(0);
+            
             if(!$_GET["word"] && !$_GET["word2"]){
                 $sql = "SELECT * FROM tbl_places order by 	place_id";
             }
@@ -106,7 +107,7 @@ if(! isset($_SESSION["user_id"])){
 
     <h2>Add Places</h2>
 
-    <form id="input" action="addplace.php" method="post">
+    <form id="input" action="subplace.php" method="post">
         <body><ul>
             <li>place_name<input id="Name" name="Name" type="text" /></li>
             <li>addr_line1<input id="Address1" name="Address1" type="text" /></li>
@@ -116,6 +117,8 @@ if(! isset($_SESSION["user_id"])){
             <li>Imfornation<input id="Imfornation" name="Imfornation" type="text" /></li>
             <li>Url<input id="Url" name="Url" type="text" /></li>
             <input type="submit" value="add" name="add" />
+            <li>Id<input id="Id" name="Id" type="text" /></li>
+            <input type="submit" value="del" name="del" />
         </ul>
     </form>
 
