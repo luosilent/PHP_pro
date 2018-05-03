@@ -106,7 +106,7 @@ if(! isset($_SESSION["user_id"])){
 
     <h2>Add Places</h2>
 
-    <form id="input" action="addplace.php" method="post">
+    <form id="input" action="subplace.php" method="post">
         <body><ul>
             <li>place_name<input id="Name" name="Name" type="text" /></li>
             <li>addr_line1<input id="Address1" name="Address1" type="text" /></li>
@@ -116,6 +116,8 @@ if(! isset($_SESSION["user_id"])){
             <li>Imfornation<input id="Imfornation" name="Imfornation" type="text" /></li>
             <li>Url<input id="Url" name="Url" type="text" /></li>
             <input type="submit" value="add" name="add" />
+            <li>Id<input id="Id" name="Id" type="text" /></li>
+            <input type="submit" value="del" name="del" />
         </ul>
     </form>
 
