@@ -15,6 +15,7 @@ $sql1 ="INSERT INTO tbl_places (place_name, addr_line1, addr_line2, open_time, c
 VALUES ('".$placename."', '".$Address1."', '".$Address2."', '".$Time1."', '".$Time2."', '".$Imfornation."', '".$Url."')";
 $sql2 ="DELETE FROM tbl_places WHERE place_id = '".$Id ."'";
 // echo($sql2);exit;
+<<<<<<< HEAD
 if(isset($_POST['add'])) {
     if(!empty($placename)){    
             $result1 = mysqli_query($conn, $sql1);
@@ -71,4 +72,63 @@ if(isset($_POST['del'])) {
                         </script>
                     ';
     }
+=======
+if(isset($placename)){
+    if(isset($_POST['add'])) {
+        $result1 = mysqli_query($conn, $sql1);
+        if (mysqli_affected_rows($conn) == 1) {
+            echo '
+                <script type="text/javascript"> 
+                    alert("Add success");            
+                    window.location = "favplaces.php";
+                </script>
+             ';
+        }else{
+            echo '
+                <script type="text/javascript">
+                alert("Add failed");           
+                    window.location = "favplaces.php";
+                </script>
+             ';
+
+        }
+    }
+}else{
+     echo '
+                <script type="text/javascript">
+                alert("Add placename first");           
+                    window.location = "favplaces.php";
+                </script>
+             ';
+}
+
+
+if(isset($Id)){
+    if(isset($_POST['del'])) {
+        $result2 = mysqli_query($conn, $sql2);
+        if (mysqli_affected_rows($conn) == 1) {
+            echo '
+                <script type="text/javascript"> 
+                    alert("del success");            
+                    window.location = "favplaces.php";
+                </script>
+             ';
+        }else{
+            echo '
+                <script type="text/javascript">
+                alert("del failed");           
+                    window.location = "favplaces.php";
+                </script>
+             ';
+
+        }
+    }
+}else{
+     echo '
+                <script type="text/javascript">
+                alert("Add Id first");           
+                    window.location = "favplaces.php";
+                </script>
+             ';
+>>>>>>> 34e80c16f3703bff2014305db1f09e86db9d8d79
 }
