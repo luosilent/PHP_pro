@@ -34,7 +34,7 @@ if(! isset($_SESSION["user_id"])){
 	<div >
 		<ul class="nav nav-pills">
 	  <li class="nav-item">
-		<a class="nav-link active" href="#">Favorite Place</a>
+		<a class="nav-link active" href="favplaces.php">Favorite Place</a>
 	  </li>
 	  <li class="nav-item Logout">
 		<a class="nav-link" href="#">Logout</a>
@@ -43,7 +43,7 @@ if(! isset($_SESSION["user_id"])){
 	  </ul>
 	</div>
 
-    <div style="align-self: flex-end;margin-right:250px;font-size:2rem;background-color: #A8A8A8; ">welcome <?php echo $_SESSION["name"];?></div>
+    <div style="align-self: flex-end;margin-right:180px;font-size:2rem;background-color: lightblue; ">welcome <?php echo $_SESSION["name"];?></div>
 </div>
 
 <div class="content" >
