@@ -43,11 +43,8 @@ if(! isset($_SESSION["user_id"])){
 	  </ul>
 	</div>
 
-<<<<<<< HEAD
     <div style="align-self: flex-end;margin-right:180px; font-size:2rem;background-color: lightblue; ">welcome <?php echo $_SESSION["name"];?></div>
-=======
-    <div style="align-self: flex-end;margin-right:180px;font-size:2rem;background-color: lightblue; ">welcome <?php echo $_SESSION["name"];?></div>
->>>>>>> 34e80c16f3703bff2014305db1f09e86db9d8d79
+
 </div>
 
 <div class="content" >
@@ -65,11 +62,7 @@ if(! isset($_SESSION["user_id"])){
                 <th>Url</th></tr>
 
             <?php
-<<<<<<< HEAD
-            
-=======
-           
->>>>>>> 34e80c16f3703bff2014305db1f09e86db9d8d79
+
             if(!$_GET["word"] && !$_GET["word2"]){
                 $sql = "SELECT * FROM tbl_places order by 	place_id";
             }
